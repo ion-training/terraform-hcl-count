@@ -17,7 +17,17 @@ git clone https://github.com/ionhashicorp/terraform-hcl-count.git
 cd terraform-hcl-count
 ```
 
-terraform init, plan, apply
+```
+$ tree
+.
+├── LICENSE
+├── README.md
+├── main.tf           # <--- This file contains the HCL configuration
+└── terraform.tfstate
+```
+[LINK](https://github.com/ionhashicorp/terraform-hcl-count/blob/main/main.tf) to main.tf
+
+Process of creating the random strings:
 ```
 terraform init
 ```
@@ -27,6 +37,7 @@ terraform plan
 ```
 terraform apply -auto-approve
 ```
+
 
 # Sample output
 
