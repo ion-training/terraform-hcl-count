@@ -4,8 +4,17 @@ _this doc is used for training purposes, do not use in production_
 # count 
 - generate same resource for _count_ times
 - repeat something
+- count official documentation [LINK](https://www.terraform.io/docs/language/meta-arguments/count.html)
 
-Official documentation [LINK](https://www.terraform.io/docs/language/meta-arguments/count.html)
+Use count in a resource to create the same resource _count_ times
+```
+resource "random_pet" "cat" {
+    length = 1
+    # count is three, means 3 strings will be generated
+    count = 3
+}
+```
+
 
 # Example
 How to generate 3 random strings
