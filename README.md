@@ -36,15 +36,22 @@ $ tree
 ├── main.tf           # <--- This file contains the HCL configuration
 └── terraform.tfstate
 ```
-[LINK](https://github.com/ionhashicorp/terraform-hcl-count/blob/main/main.tf) to main.tf
+
 
 Process of creating the random strings:
+
+Initialize the directory
 ```
 terraform init
 ```
+
+Run the terraform plan to see what is going to happen (plan = dry-run):
 ```
 terraform plan
 ```
+
+Perform the plan. \
+_For brevity -auto-approve option was used._
 ```
 terraform apply -auto-approve
 ```
