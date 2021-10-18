@@ -16,12 +16,14 @@ resource "random_pet" "cat" {
 ```
 
 
-# Example
-How to generate 3 random strings
+# Example: how to generate 3 random strings
+
+Clone the repository
 ```
 git clone https://github.com/ionhashicorp/terraform-hcl-count.git
 ```
 
+Change the directory into the newly downloaded repo
 ```
 cd terraform-hcl-count
 ```
