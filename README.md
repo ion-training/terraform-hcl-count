@@ -50,8 +50,8 @@ Run the terraform plan to see what is going to happen (plan = dry-run):
 terraform plan
 ```
 
-Perform the plan. \
-_For brevity -auto-approve option was used._
+Perform the plan \
+_For brevity -auto-approve option was used_
 ```
 terraform apply -auto-approve
 ```
