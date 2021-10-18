@@ -51,7 +51,7 @@ terraform apply -auto-approve
 # Sample output
 
 ```
-$terraform init
+$ terraform init
 
 Initializing the backend...
 
@@ -74,10 +74,9 @@ should now work.
 If you ever set or change modules or backend configuration for Terraform,
 rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
-$ 
 ```
 ```
-$terraform plan
+$ terraform plan
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
   + create
@@ -107,13 +106,17 @@ Terraform will perform the following actions:
 
 Plan: 3 to add, 0 to change, 0 to destroy.
 
-───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Changes to Outputs:
+  + mycat = [
+      + (known after apply),
+      + (known after apply),
+      + (known after apply),
+    ]
 
-Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply"
-now.
-$
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
 ```
-
 ```
 $ terraform apply -auto-approve
 
@@ -144,13 +147,28 @@ Terraform will perform the following actions:
     }
 
 Plan: 3 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + mycat = [
+      + (known after apply),
+      + (known after apply),
+      + (known after apply),
+    ]
 random_pet.cat[1]: Creating...
-random_pet.cat[0]: Creating...
 random_pet.cat[2]: Creating...
-random_pet.cat[2]: Creation complete after 0s [id=stud]
-random_pet.cat[1]: Creation complete after 0s [id=hedgehog]
-random_pet.cat[0]: Creation complete after 0s [id=rat]
+random_pet.cat[0]: Creating...
+random_pet.cat[2]: Creation complete after 0s [id=haddock]
+random_pet.cat[0]: Creation complete after 0s [id=doberman]
+random_pet.cat[1]: Creation complete after 0s [id=robin]
 
 Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+mycat = [
+  "doberman",
+  "robin",
+  "haddock",
+]
 $
 ```
