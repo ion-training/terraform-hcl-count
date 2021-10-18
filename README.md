@@ -172,3 +172,61 @@ mycat = [
 ]
 $
 ```
+
+```
+$ terraform destroy 
+random_pet.cat[0]: Refreshing state... [id=doberman]
+random_pet.cat[1]: Refreshing state... [id=robin]
+random_pet.cat[2]: Refreshing state... [id=haddock]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # random_pet.cat[0] will be destroyed
+  - resource "random_pet" "cat" {
+      - id        = "doberman" -> null
+      - length    = 1 -> null
+      - separator = "-" -> null
+    }
+
+  # random_pet.cat[1] will be destroyed
+  - resource "random_pet" "cat" {
+      - id        = "robin" -> null
+      - length    = 1 -> null
+      - separator = "-" -> null
+    }
+
+  # random_pet.cat[2] will be destroyed
+  - resource "random_pet" "cat" {
+      - id        = "haddock" -> null
+      - length    = 1 -> null
+      - separator = "-" -> null
+    }
+
+Plan: 0 to add, 0 to change, 3 to destroy.
+
+Changes to Outputs:
+  - mycat = [
+      - "doberman",
+      - "robin",
+      - "haddock",
+    ] -> null
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+random_pet.cat[1]: Destroying... [id=robin]
+random_pet.cat[2]: Destroying... [id=haddock]
+random_pet.cat[0]: Destroying... [id=doberman]
+random_pet.cat[2]: Destruction complete after 0s
+random_pet.cat[0]: Destruction complete after 0s
+random_pet.cat[1]: Destruction complete after 0s
+
+Destroy complete! Resources: 3 destroyed.
+$
+```
